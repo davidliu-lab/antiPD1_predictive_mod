@@ -1,0 +1,122 @@
+karyotype = data/karyotype/karyotype.human.txt
+band = data/karyotype/chromosome.band.hg38.txt
+
+
+<ideogram>
+
+<spacing>
+default = 0.005r
+</spacing>
+
+radius           = 0.90r
+thickness        = 100p
+fill             = yes  
+stroke_color     = dgrey
+stroke_thickness = 2p
+
+band_stroke_thickness = 1
+show_bands            = yes
+fill_bands            = yes   
+show_label     = yes
+label_with_tag = yes
+label_font     = condensedbold
+label_radius   = dims(ideogram,radius) + 0.025r
+label_size     = 45p
+
+</ideogram>
+
+
+<image>
+<<include etc/image.conf>>
+</image>
+chromosomes_units           = 200000000
+chromosomes = hs1;hs2;hs3;hs4;hs5;hs6;hs7;hs8;hs9;hs10;hs11;hs12;hs13;hs14;hs15;hs16;hs17;hs18;hs19;hs20;hs21;hs22
+chromosomes_display_default = no
+
+<plots>
+
+<plot>
+show = yes
+r0 = 0.96r
+r1 = 0.99r
+<backgrounds>
+<background>
+color = vvlgrey
+</background>
+</backgrounds>
+type = highlight 
+stroke_thickness = no 
+file       = PD004_TN.segtab.txt.per_segment.oncotated.txt.cna_processed.tsvcircos.txt
+</plot>
+
+<plot>
+show = yes
+r0 = 0.92r
+r1 = 0.95r
+<backgrounds>
+<background>
+color = vvlgrey
+</background>
+</backgrounds>
+type = highlight 
+stroke_thickness = no 
+file       = 57_TN.segtab.txt.per_segment.oncotated.txt.cna_processed.tsvcircos.txt
+</plot>
+
+
+<plot>
+show = yes
+r0 = 0.88r
+r1 = 0.91r
+<backgrounds>
+<background>
+color = vvlgrey
+</background>
+</backgrounds>
+type = highlight
+stroke_thickness = no 
+file       = 482_TN.segtab.txt.per_segment.oncotated.txt.cna_processed.tsvcircos.txt
+</plot>
+
+<plot>
+show = yes
+r0 = 0.84r
+r1 = 0.87r
+<backgrounds>
+<background>
+color = vvlgrey
+</background>
+</backgrounds>
+type = highlight 
+stroke_thickness = no 
+file       = 417_TN.segtab.txt.per_segment.oncotated.txt.cna_processed.tsvcircos.txt
+</plot>
+</plots>
+
+
+
+
+################################################################
+# The remaining content is standard and required. It is imported 
+# from default files in the Circos distribution.
+#
+# These should be present in every Circos configuration file and
+# overridden as required. To see the content of these files, 
+# look in etc/ in the Circos distribution.
+
+<image>
+# Included from Circos distribution.
+<<include etc/image.conf>>
+</image>
+
+# RGB/HSV color definitions, color lists, location of fonts, fill patterns.
+# Included from Circos distribution.
+<<include etc/colors_fonts_patterns.conf>>
+
+
+
+# Debugging, I/O an dother system parameters
+# Included from Circos distribution.
+<<include etc/housekeeping.conf>>
+
+
